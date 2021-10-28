@@ -1,12 +1,13 @@
 {
    "type": "mysql",
-   "host": "localhost",
-   "port": 3306,
-   "username": "test",
-   "password": "test",
-   "database": "test",
-   "synchronize": true,
-   "logging": false,
+   "host": "127.0.0.1",
+   "port": 8888,
+   "username": "root",
+   "password": "abcd123456",
+   "database": "ecommerce",
+   "synchronize": false,
+   "logging": true,
+   "migrationsRun": true,
    "entities": [
       "src/entity/**/*.ts"
    ],
