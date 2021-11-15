@@ -1,4 +1,5 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import { Role } from './Role';
+import {Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn} from "typeorm";
 
 @Entity()
 export class User {
@@ -7,12 +8,31 @@ export class User {
     id: number;
 
     @Column()
-    firstName: string;
+    username: string;
 
     @Column()
-    lastName: string;
+    password: string;
 
     @Column()
-    age: number;
+    email: string;
+
+    @Column()
+    address:string;
+
+    @Column()
+    full_name:string;
+
+    @Column()
+    is_active:boolean;
+
+    @Column()
+    created_at:Date;
+
+    @Column()
+    updated_at:Date;
+
+    @OneToOne(()=>Role)
+    @JoinColumn()
+    role_id:Role;
 
 }
